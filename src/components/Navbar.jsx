@@ -89,30 +89,38 @@ const Navbar = ({ setCategory, activeCategory, user, setUser }) => {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', color: 'white' }}>
                 <Search size={20} style={{ cursor: 'pointer' }} />
-                <span style={{ fontSize: '14px', cursor: 'pointer' }}>{user ? user.email : 'Guest'}</span>
-                <Bell size={20} style={{ cursor: 'pointer' }} />
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer' }}>
-                    <div style={{ width: '30px', height: '30px', borderRadius: '4px', backgroundColor: '#e50914', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <User size={18} />
-                    </div>
-                </div>
 
+                {/* SAFE MODE DEBUGGING */}
+                <div style={{ color: 'red' }}>DEBUG MODE</div>
+                <button onClick={() => navigate('/login')}>Sign In</button>
+                <button onClick={() => navigate('/signup')}>Sign Up</button>
+
+                {/* 
                 {user ? (
-                    <button
-                        onClick={handleLogout}
-                        style={{
-                            padding: '8px 16px',
-                            backgroundColor: '#e50914',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '4px',
-                            cursor: 'pointer',
-                            fontWeight: 'bold',
-                            fontSize: '14px'
-                        }}
-                    >
-                        Logout
-                    </button>
+                    <>
+                        <span style={{ fontSize: '14px', cursor: 'pointer' }}>{user.email}</span>
+                        <Bell size={20} style={{ cursor: 'pointer' }} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer' }}>
+                            <div style={{ width: '30px', height: '30px', borderRadius: '4px', backgroundColor: '#e50914', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <User size={18} />
+                            </div>
+                        </div>
+                        <button
+                            onClick={handleLogout}
+                            style={{
+                                padding: '8px 16px',
+                                backgroundColor: '#e50914',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '4px',
+                                cursor: 'pointer',
+                                fontWeight: 'bold',
+                                fontSize: '14px'
+                            }}
+                        >
+                            Logout
+                        </button>
+                    </>
                 ) : (
                     <>
                         <button
@@ -147,7 +155,8 @@ const Navbar = ({ setCategory, activeCategory, user, setUser }) => {
                             Sign Up
                         </button>
                     </>
-                )}
+                )} 
+                */}
             </div>
         </nav>
     );
